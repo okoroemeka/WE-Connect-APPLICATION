@@ -38,6 +38,6 @@ app.get('/businesses/:businessId', businesscontroller.getSinglebusiness);
 app.get('/businesses', businesscontroller.getBusinesses);
 app.post('/businesses/:businessId/reviews', reviewsController.addReview);
 app.get('/businesses/:businessId/reviews', reviewsController.getReviews);
-// createBusiness
+
 
 module.exports = app;
