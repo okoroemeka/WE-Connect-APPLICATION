@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node controller/business-controller.js --presets env"
+    "start": "nodemon src/server.js --exec babel-node preset env",
+    "build": "babel src -d recompiled --presets env",
+    "serve": "node recompiled/server.js",
+    "test": "mocha --compilers js:babel-register "
   },
   "keywords": [],
   "author": "",
@@ -15,7 +17,9 @@
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.18.2",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.9.0"
+    "eslint-plugin-import": "^2.9.0",
+    "mocha": "^5.0.4",
+    "nodemon": "^1.17.2"
   },
   "dependencies": {
     "body-parser": "1.18.2",
