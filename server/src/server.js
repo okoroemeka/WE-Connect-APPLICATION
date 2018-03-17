@@ -14,3 +14,5 @@ const server = http.createServer(router);
 
 // server listening at designated port
 server.listen(port);
+
+module.exports = server;
