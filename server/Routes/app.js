@@ -4,7 +4,7 @@ import express from 'express';
 // impoerting body parser for formatting user request
 import bodyParser from 'body-parser';
 
-// import logger for returning responser
+// import logger for returning response
 import logger from 'morgan';
 
 // importing errorhandler taking of errors
@@ -22,6 +22,8 @@ const router = express();
 router.use(bodyParser.json());
 router.use(errorhandler());
 router.use(logger('dev'));
+router.use(bodyParser.urlencoded({ extended: true }));
+
 
 // seed datas for testing of routes
 const store = {
@@ -42,7 +44,7 @@ const store = {
   LogIn: [{ username: 'name', password: 'password' }],
 };
 
-// making the seed datas available to controllers
+// making the seed datas available to controllers by adding them to the request object.
 router.use((req, res, next) => {
   req.store = store;
   next();
