@@ -60,10 +60,10 @@ class Business {
     const businessToRemove = req.store.businesses[Id];
 
     if (!businessToRemove) {
-      res.status(404).send();
+      res.status(404).send({ message: 'business does not exist' });
     }
     req.store.businesses.splice(Id, 1);
-    res.status(204).send();
+    res.sendStatus(204);
   }
 }
 
