@@ -1,0 +1,31 @@
+#subcont{
+    margin-top: 8%;
+    margin-left: 30%;
+}
+
+#signup{
+    margin-left: 75px;
+    margin-bottom: 15px;
+    color: green;
+
+}
+#signupButton{
+    background-color: green;
+}
+
+#navbarNav{
+    margin-left: 40%;
+}
+
+#form{
+   margin-left: 300px;  
+}
+
+#arr{
+    margin-top: 15px;
+    margin-left : 5px
+}
+
+#ssr{
+    margin-left: 10px;
+}
