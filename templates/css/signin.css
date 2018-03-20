@@ -1,0 +1,22 @@
+
+#cont{
+    margin-top: 15%;
+    margin-left: 35%;
+}
+h4{
+    margin-left: 100px;
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    color: green;
+}
+h6{
+    text-align: center;
+    margin-top: 15px;
+}
+#createAcc{
+    margin-left: 15px
+}
+#signIn{
+    background-color: green;
+}
