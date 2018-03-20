@@ -1,6 +1,12 @@
-
+body{
+    background-image: url("../image/Design-Background.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    
+} 
 #cont{
-    margin-top: 15%;
+    margin-top: 10%;
     margin-left: 35%;
 }
 h4{
@@ -13,10 +19,17 @@ h4{
 h6{
     text-align: center;
     margin-top: 15px;
+    color: white;
 }
 #createAcc{
     margin-left: 15px
 }
 #signIn{
     background-color: green;
+}
+#navbarNav{
+    margin-left: 45%;
+}
+label{
+    color: white;
 }
