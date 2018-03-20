@@ -16,7 +16,7 @@ import loginController from '../controller/Login-controller';
 import businesscontroller from '../controller/business-controller';
 import reviewsController from '../controller/reviews-controller';
 
-// creating express subrouter
+// creating express router
 const router = express();
 
 router.use(bodyParser.json());
@@ -28,16 +28,16 @@ router.use(bodyParser.urlencoded({ extended: true }));
 // seed datas for testing of routes
 const store = {
   businesses: [{
-    business: 'businessname',
-    reviews: [{ review: 'good business' }, { review2: 'great business' }],
-    location: 'lagos',
+    CompanyName: 'Fashion House',
+    Category: 'Fahion',
+    Address: '2 olu dara street',
+    State: 'Lagos',
+    Telephone: '0806432xxxx',
+    state: 'lagos',
+    Website: 'www.Fhouse.com',
+    location: 'Nigeria',
     category: 'tech',
-  },
-  {
-    business: 'businessname',
-    reviews: [{ review: 'nice business' }, { review2: 'wonderful business' }],
-    location: 'kano',
-    category: 'fashion',
+    reviews: [{ review: 'good business' }, { review2: 'great business' }],
   },
   ],
   signUp: [{ username: 'email', password: 'password' }],
