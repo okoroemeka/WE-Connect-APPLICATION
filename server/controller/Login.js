@@ -10,4 +10,3 @@ class LogIn {
 }
 
 module.exports = LogIn;
-
