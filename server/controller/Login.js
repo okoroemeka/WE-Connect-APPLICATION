@@ -1,6 +1,7 @@
 /*
 user login class
 */
+
 class LogIn {
   static userLogIn(req, res) {
     const user = req.body;
@@ -10,4 +11,3 @@ class LogIn {
 }
 
 module.exports = LogIn;
-

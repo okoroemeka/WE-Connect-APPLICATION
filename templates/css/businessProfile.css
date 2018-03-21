@@ -1,21 +1,41 @@
 body{
+    background-image: url("../image/Design-Background.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;  
     padding-bottom: 20px;
     font-size: 1rem;
 }
 #casing{
     margin-top: 4%;
+    margin-left: 27%;
+    margin-bottom: 4%;
 }
 
 #title{
-    color: forestgreen;
+    color: white;
     margin-bottom: 20px;
 
 }
-#casing{
-    margin-left: 310px;
-    margin-bottom: 5%;
-}
+/* #casing{
+    margin-left: 27%;
+    margin-bottom: 4%;
+
+} */
 
 #navbarNav{
     margin-left: 40%;
 }
+ #main{
+    background-color: white;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+
+} 
+ #titlecasing{
+    margin-left: 18%;
+    color: white;
+    
+} 
