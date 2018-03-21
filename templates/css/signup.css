@@ -1,0 +1,43 @@
+body{
+    background-image: url("../image/Design-Background.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;  
+} 
+#subcont{
+    margin-top: 8%;
+    margin-left: 38%;
+}
+
+#signup{
+    margin-left: 75px;
+    margin-bottom: 15px;
+    color: green;
+
+}
+#signupButton{
+    background-color: green;
+}
+
+#navbarNav{
+    margin-left: 60%;
+}
+
+#form{
+   margin-left: 100%;  
+}
+
+#arr{
+    margin-top: 15px;
+    margin-left : 5px
+}
+
+#ssr{
+    margin-left: 10px;
+}
+label{
+    color: white;
+}
+h6{
+    color: green;
+}
