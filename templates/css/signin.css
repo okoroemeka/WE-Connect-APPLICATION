@@ -6,6 +6,7 @@ body{
     
 } 
 #cont{
+    
     margin-top: 10%;
     margin-left: 35%;
 }
@@ -14,7 +15,7 @@ h4{
     margin-bottom: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 30px;
-    color: green;
+    color:white;
 }
 h6{
     text-align: center;
@@ -28,7 +29,7 @@ h6{
     background-color: green;
 }
 #navbarNav{
-    margin-left: 45%;
+    margin-left: 55rem;
 }
 label{
     color: white;
