@@ -1,0 +1,20 @@
+body{
+    background-image: url("../image/Design-Background.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;   
+}
+#navbarNav{
+    margin-left: 30%;
+}
+#line1{
+    margin-bottom: 2%;
+    margin-top: 8%;
+    margin-right:3%; 
+    overflow: auto;
+}
+#form{
+    margin-left: 30px; 
+    
+ }
+
