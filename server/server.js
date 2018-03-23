@@ -1,11 +1,11 @@
 import http from 'http';
-import router from '../Routes/app';
+import router from '../server/Routes/app';
 
 // app.use('api/v1/', router);
 
 
 // creating the port where app will listen for incoming request
-const port = parseInt(process.env.PORT, 10) || 8000;
+const port = parseInt(process.env.PORT, 10) || 8001;
 
 router.set('port', port);
 

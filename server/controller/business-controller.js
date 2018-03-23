@@ -65,6 +65,18 @@ class Business {
     req.store.businesses.splice(Id, 1);
     res.sendStatus(204);
   }
+
+  // static changeBusinessLocaton(req, res) {
+  //   const id = req.params.businessId;
+  //   const newLocation = req.body;
+  //   const businessToChangeLocation = req.store.businesses[id];
+
+  //   if (!businessToChangeLocation) {
+  //     res.status(404).send({ message: 'business does not exit' });
+  //   }
+  //   businessToChangeLocation.location = newLocation.location;
+  //   res.status(200).send(req.store.businesses[id]);
+  // }
 }
 
 module.exports = Business;
