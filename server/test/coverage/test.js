@@ -1,10 +1,9 @@
-// Setting the environment to test.
-process.env.NODE_ENV = 'test';
-
 // importing chai ,chaiHttp, and application server
 import chai from 'chai';
 import chaiHttp from 'chai-http';
 import server from '../src/server';
+// Setting the environment to test.
+process.env.NODE_ENV = 'test';
 
 
 const should = chai.should();

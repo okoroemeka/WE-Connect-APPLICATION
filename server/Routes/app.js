@@ -25,11 +25,10 @@ router.use(logger('dev'));
 router.use(bodyParser.urlencoded({ extended: true }));
 
 
-// seed datas for testing of routes
 const store = {
   businesses: [{
     CompanyName: 'Fashion House',
-    Category: 'Fahion',
+    Category: 'Fashion',
     Address: '2 olu dara street',
     State: 'Lagos',
     Telephone: '0806432xxxx',
@@ -44,7 +43,6 @@ const store = {
   LogIn: [{ username: 'name', password: 'password' }],
 };
 
-// making the seed datas available to controllers by adding them to the request object.
 router.use((req, res, next) => {
   req.store = store;
   next();
