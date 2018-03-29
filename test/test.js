@@ -76,7 +76,7 @@ describe('businesses', () => {
         .send(business)
         .end((err, res) => {
           res.should.have.status(201);
-          res.body.should.have.property('businessId').eql(2);
+          res.body.should.have.property('businessId').eql(1);
           done();
         });
     });
@@ -99,7 +99,7 @@ describe('businesses', () => {
         .send(business)
         .end((err, res) => {
           res.should.have.status(201);
-          res.body.should.have.property('businessId').eql(3);
+          res.body.should.have.property('businessId').eql(2);
           done();
         });
     });
@@ -125,7 +125,7 @@ describe('businesses', () => {
         review: 'not so wonderful, but good for a start',
       };
       chai.request(server)
-        .post('/businesses/1/reviews')
+        .post('/businesses/0/reviews')
         .send(comment)
         .end((err, res) => {
           res.should.have.status(201);
@@ -154,7 +154,7 @@ describe('businesses', () => {
         .get('/businesses/0/reviews')
         .end((err, res) => {
           res.should.have.status(200);
-          res.body.should.be.a('array');
+          res.body.should.be.a('object');
           done();
         });
     });
