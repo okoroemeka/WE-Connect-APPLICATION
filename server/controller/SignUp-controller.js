@@ -3,10 +3,16 @@ user signup class
 */
 class Signup {
   static createNewuser(req, res) {
-    const userInfo = req.body;
-    const newUserId = req.store.signUp.length;
-    req.store.signUp.push(userInfo);
-    res.status(201).send({ newUserId });
+    // getting user information
+    const userInfo = { userName: req.body.userName, password: req.body.password };
+    // creating the new user Id.
+    const newUserId = req.store.signUp.length - 1;
+    // checking if the user signup passwords match
+    if (req.body.password === req.body.retypedPassword) {
+      req.store.signUp.push(userInfo);
+      res.status(201).send({ newUserId });
+    }
+    res.status(400).send({ message: " the passwords don't match " });
   }
 }
 
