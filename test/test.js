@@ -29,6 +29,7 @@ describe('businesses', () => {
       const newUser = {
         name: 'emeka',
         password: 'xxxx',
+        retypedPassword: 'xxxx'
       };
       chai.request(server)
         .post('/auth/signup')
