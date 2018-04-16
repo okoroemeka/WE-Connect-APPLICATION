@@ -15,33 +15,17 @@ import signUpcontroller from '../controller/SignUp-controller';
 import loginController from '../controller/Login-controller';
 import businesscontroller from '../controller/business-controller';
 import reviewsController from '../controller/reviews-controller';
+import store from '../seeder/seed';
 
 // creating express router
 const router = express();
+
 
 router.use(bodyParser.json());
 router.use(errorhandler());
 router.use(logger('dev'));
 router.use(bodyParser.urlencoded({ extended: true }));
 
-
-const store = {
-  businesses: [{
-    CompanyName: 'Fashion House',
-    Category: 'Fashion',
-    Address: '2 olu dara street',
-    State: 'Lagos',
-    Telephone: '0806432xxxx',
-    state: 'lagos',
-    Website: 'www.Fhouse.com',
-    location: 'Nigeria',
-    category: 'tech',
-    reviews: [{ review: 'good business' }, { review2: 'great business' }],
-  },
-  ],
-  signUp: [{ username: 'email', password: 'password' }],
-  LogIn: [{ username: 'name', password: 'password' }],
-};
 
 router.use((req, res, next) => {
   req.store = store;
