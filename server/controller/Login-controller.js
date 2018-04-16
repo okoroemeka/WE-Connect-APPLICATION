@@ -4,11 +4,21 @@ user login class
 class LogIn {
   static userLogIn(req, res) {
     // getting user login information
-    const userinfo = { userName: req.body.userName, password: req.body.password };
+    const userInfo = {
+      username: req.body.username,
+      password: req.body.password,
+    };
+    // checking if the user is an already existing user
+    const userExist = req.store.LogIn
+      .filter(user => user.username === userInfo.username && user.password === userInfo.password);
     // putting user information into login array
-    req.store.LogIn.push(userinfo);
-
-    res.status(200).send({ message: 'Welcome' });
+    if (userExist.length === 0) {
+      return res.status(404).send({
+        message: 'Wrong username or password',
+      });
+    }
+    req.store.LogIn.push(userInfo);
+    return res.status(200).send({ message: 'Welcome' });
   }
 }
 
