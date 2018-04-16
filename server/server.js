@@ -5,7 +5,7 @@ import router from '../server/Routes/app';
 
 
 // creating the port where app will listen for incoming request
-const port = parseInt(process.env.PORT, 10) || 8000;
+const port = parseInt(process.env.PORT, 10) || 9000;
 
 router.set('port', port);
 

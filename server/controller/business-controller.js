@@ -6,12 +6,15 @@ class Business {
   /* Gets all business from the array of business */
 
   static getBusinesses(req, res) {
-    // Checking if user wants to get business by locaton and return businesses within the user specified location
+    /* Checking if user wants to get business by locaton and
+    return businesses within the user specified location */
+
     if (req.query.location) {
       // Getting business location
       const businessLocation = req.query.location;
       // Getting all business within the specified location
-      const businessesWithinLocation = req.store.businesses.filter(business => business.location === businessLocation);
+      const businessesWithinLocation = req.store.businesses
+        .filter(business => business.location === businessLocation);
       // Checking if there are no business within the specified location.
       if (businessesWithinLocation.length === 0) {
         return res.sendStatus(404);
@@ -19,13 +22,18 @@ class Business {
       // Sending all the business within the location to the specific users
       return res.status(200).send(businessesWithinLocation);
     }
-    // Checking if user wants to get business by category and then return businesses within the user specified category
+    /* Checking if user wants to get business by category
+    and then return businesses within the user specified category */
+
     if (req.query.category) {
       // Get business category
       const businessCategory = req.query.category;
       // Get businesses within the specified category
-      const businessesByCategory = req.store.businesses.filter(business => business.category === businessCategory);
-      // Checking if there are no business within the specified category, then sending response to user.
+      const businessesByCategory = req.store.businesses
+        .filter(business => business.category === businessCategory);
+
+      /* Checking if there are no business within the
+      specified category,then sending response to user. */
       if (businessesByCategory.length === 0) {
         return res.sendStatus(404);
       }
