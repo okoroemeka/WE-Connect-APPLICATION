@@ -1,14 +1,32 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=e44ec093f703108bdca028931076e4c7b6f01cdbfe923d5b5627fdecb84112ea
 language: node_js
-cache: bundler
+
 node_js:
   - 9.3.0
+
 services:
   - postgresql
+
+before_install:
+- cd server
+
+install:
+  - npm install
+
+before_script:
+  - curl -L http://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chomd +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
 script:
   - npm run test
+
 after_success:
   - npm run coveralls
   - npm run coverage
 
-env:
-  global:
+cache:
+  directories:
+    - "node_modules"
