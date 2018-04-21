@@ -4,7 +4,7 @@ env:
 language: node_js
 
 node_js:
-  - 9.3.0
+  - "stable"
 
 services:
   - postgresql
@@ -17,7 +17,7 @@ install:
 
 before_script:
   - curl -L http://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chomd +x ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 
 script:
