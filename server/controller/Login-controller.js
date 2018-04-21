@@ -13,7 +13,7 @@ class LogIn {
       .filter(user => user.username === userInfo.username && user.password === userInfo.password);
     // putting user information into login array
     if (userExist.length === 0) {
-      return res.status(404).send({
+      return res.status(401).send({
         message: 'Wrong username or password',
       });
     }

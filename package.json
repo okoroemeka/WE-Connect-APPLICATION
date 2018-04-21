@@ -7,10 +7,14 @@
     "start": "SET NODE_ENV=dev && nodemon server/server.js --exec babel-node preset env",
     "build": "babel server/server.js -d recompiled --presets env",
     "serve": "node recompiled/server.js",
-    "test": "mocha --compilers js:babel-register "
+    "test": "mocha --compilers js:babel-register ",
+    "coverage": "nyc npm test && nyc report --reproter=text-lcov | coveralls"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "weconnect",
+    "businesses"
+  ],
+  "author": "Okoro Emeka",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -21,6 +25,7 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.9.0",
     "mocha": "^5.0.4",
+    "mocha-lcov-reporter": "^1.3.0",
     "nodemon": "^1.17.2"
   },
   "dependencies": {

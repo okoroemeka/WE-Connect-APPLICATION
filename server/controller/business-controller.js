@@ -6,40 +6,56 @@ class Business {
   /* Gets all business from the array of business */
 
   static getBusinesses(req, res) {
-    /* Checking if user wants to get business by locaton and
-    return businesses within the user specified location */
+    /*
+      *Checking if user wants to get business by locaton and
+      *return businesses within the user specified location
+    */
 
-    if (req.query.location) {
+    if (req.query.Location) {
       // Getting business location
-      const businessLocation = req.query.location;
+      const businessLocation = req.query.Location;
+
       // Getting all business within the specified location
       const businessesWithinLocation = req.store.businesses
-        .filter(business => business.location === businessLocation);
+        .filter(business => business.Location === businessLocation);
+
       // Checking if there are no business within the specified location.
       if (businessesWithinLocation.length === 0) {
-        return res.sendStatus(404);
+        return res.status(404).send({
+          message: 'There are no Business within this location',
+        });
       }
+
       // Sending all the business within the location to the specific users
       return res.status(200).send(businessesWithinLocation);
     }
-    /* Checking if user wants to get business by category
-    and then return businesses within the user specified category */
 
-    if (req.query.category) {
+    /*
+      Checking if user wants to get business by category
+      and then return businesses within the user specified category
+    */
+    if (req.query.Category) {
       // Get business category
-      const businessCategory = req.query.category;
+      const businessCategory = req.query.Category;
+
       // Get businesses within the specified category
       const businessesByCategory = req.store.businesses
-        .filter(business => business.category === businessCategory);
+        .filter(business => business.Category === businessCategory);
 
-      /* Checking if there are no business within the
-      specified category,then sending response to user. */
+      /*
+        *Checking if there are no business within the
+        *specified category,then sending response to user.
+      */
       if (businessesByCategory.length === 0) {
-        return res.sendStatus(404);
+        return res.status(404).send({
+          message: 'There are no Business within this category',
+        });
       }
+
       // sending response to user with businesses within the specified category
       return res.status(200).send(businessesByCategory);
     }
+
     // Sending all businesses to user when category nor location is specified.
     return res.status(200).send(req.store.businesses);
   }
@@ -55,10 +71,13 @@ class Business {
       businessCategory: req.body.businessCategory,
       businessLocation: req.body.businessLocation,
     };
+
     // Getting new business Id
     const businessId = req.store.businesses.length;
+
     // Adding new business to array of businesses
     req.store.businesses.push(newBusinessInformation);
+
     // Sending responds to User
     res.status(201).send({ businessId });
   }
@@ -80,6 +99,7 @@ class Business {
   static updateBusiness(req, res) {
     // Get business Id
     const Id = req.params.businessId;
+
     // Get business information
     const businessInformation = {
       businessName: req.body.businessName,
@@ -89,18 +109,18 @@ class Business {
       businessCategory: req.body.businessCategory,
       businessLocation: req.body.businessLocation,
     };
-    // Get new business Id
-    const businessId = req.store.businesses.length;
+
     // Get business from business array
     const businessToUpdate = req.store.businesses[Id];
     // Checking if business does not exist and then creating it.
     if (!businessToUpdate) {
-      req.store.businesses.push(businessInformation);
-      res.status(201).send({ businessId });
+      return res.status(404).send({
+        message: 'The business you want to update does not exist',
+      });
     }
     // Updating the information of the already existing business
     req.store.businesses[Id] = businessInformation;
-    res.status(200).send(req.store.businesses);
+    return res.status(200).send(req.store.businesses);
   }
 
   /* Removing a business */
