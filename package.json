@@ -7,7 +7,7 @@
     "start": "SET NODE_ENV=dev && nodemon server/server.js --exec babel-node preset env",
     "build": "babel server/server.js -d recompiled --presets env",
     "serve": "node recompiled/server.js",
-    "test": "mocha --compilers js:babel-register ./test/test.js --exit --timeout 20000",
+    "test": "nyc mocha --compilers js:babel-register ./test/test.js --exit --timeout 20000",
     "coverage": "nyc npm test && nyc report --reproter=text-lcov | coveralls"
   },
   "keywords": [
