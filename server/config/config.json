@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "okoro nnaemeka",
+    "password": null,
+    "database": "weconnect",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres"
+  },
+  "tests": {
+    "username": "okoro nnaemeka",
+    "password": null,
+    "database": "weconnect_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "use_env_variable": "DATABASE_URL_TEST"
+  },
+  "production":{
+    "use_env_variable":"DATABASE_URL"
+  }
+}
