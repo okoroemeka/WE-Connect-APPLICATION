@@ -2,29 +2,16 @@
 
 module.exports = (sequelize, DataTypes) => {
   const Business = sequelize.define('Business', {
-    businessname: {
-      type: DataTypes.STRING,
-    },
-    businessaddress: {
-      type: DataTypes.STRING,
-    },
-    email: {
-      type: DataTypes.STRING,
-    },
-    phonenumber: {
-      type: DataTypes.INTEGER,
-    },
-    website: {
-      type: DataTypes.STRING,
-    },
-    category: {
-      type: DataTypes.STRING,
-    },
-    location: {
-      type: DataTypes.STRING,
-    },
+    company: DataTypes.STRING,
+    address: DataTypes.STRING,
+    state: DataTypes.STRING,
+    telephone: DataTypes.STRING,
+    website: DataTypes.STRING,
+    location: DataTypes.STRING,
+    category: DataTypes.STRING,
   });
   Business.associate = (models) => {
+    // associations can be defined here
     Business.belongsTo(models.User, {
       foreignKey: 'userId',
       onDelete: 'CASCADE',
@@ -33,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
   Business.associate = (models) => {
     Business.hasMany(models.Review, {
       foreignKey: 'businessId',
-      onDelete: 'CASCADE',
+      as: 'reviews',
     });
   };
   return Business;
