@@ -34,15 +34,15 @@ router.use(bodyParser.urlencoded({ extended: true }));
 
 
 // adding end points to router
-router.post('/auth/signup', userController.createUser);
-router.post('/auth/login', userController.userLogin);
-router.post('/businesses/', verifyToken, businessController.createBusiness);
-router.put('/businesses/:businessId', businessController.updateBusiness);
-router.delete('/businesses/:businessId', businessController.deleteBusiness);
-router.get('/businesses/:businessId', businessController.getSingleBusiness);
-router.get('/businesses', businessController.getBusinesses);
-router.post('/businesses/:businessId/reviews', verifyBusiness, reviewsController.addReview);
-router.get('/businesses/:businessId/reviews', verifyBusiness, reviewsController.getReviews);
+router.post('/api/v1/auth/signup', userController.createUser);
+router.post('/api/v1/auth/login', userController.userLogin);
+router.post('/api/v1/businesses/', verifyToken, businessController.createBusiness);
+router.put('/api/v1/businesses/:businessId', businessController.updateBusiness);
+router.delete('/api/v1/businesses/:businessId', businessController.deleteBusiness);
+router.get('/api/v1/businesses/:businessId', businessController.getSingleBusiness);
+router.get('/api/v1/businesses', businessController.getBusinesses);
+router.post('/api/v1/businesses/:businessId/reviews', verifyBusiness, reviewsController.addReview);
+router.get('/api/v1/businesses/:businessId/reviews', verifyBusiness, reviewsController.getReviews);
 
 // exporting the router
 module.exports = router;

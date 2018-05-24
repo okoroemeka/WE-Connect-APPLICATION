@@ -7,6 +7,7 @@
     "start": "nodemon server/server.js --exec babel-node preset env",
     "build": "babel server/server.js -d recompiled --presets env",
     "serve": "node recompiled/server.js",
+    "db-migrate": "./node_modules/sequelize-cli/lib/sequelize db:migrate",
     "test": "nyc mocha --compilers js:babel-register ./test/test.js --exit --timeout 20000",
     "coverage": "nyc npm test && nyc report --reproter=text-lcov | coveralls"
   },
@@ -40,6 +41,7 @@
     "nyc": "^11.6.0",
     "pg": "^7.4.1",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^4.37.6"
+    "sequelize": "^4.37.6",
+    "sequelize-cli": "^4.0.0"
   }
 }

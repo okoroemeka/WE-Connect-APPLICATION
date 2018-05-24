@@ -10,16 +10,15 @@
   "test": {
     "username": "USRE",
     "password": null,
-    "database": "database_test",
+    "database": "WeConnect-dev-test",
     "port": 5432,
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
+  "test":{
+    "use_env_variable":"DATABASE_TEST_URL",
+  },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "use_env_variable":"DATABASE_URL",
   }
 }
