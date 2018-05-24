@@ -17,7 +17,7 @@ const secretKey = process.env.SECRET_KEY;
     *@param{*}next
 */
 const verifyToken = (req, res, next) => {
-  const token = req.headers['x-access-token'];
+  const token = req.headers['x-access-token'] || req.body.token || req.headers.auth;
   if (token) {
     jwt.verify(token, secretKey, (err, decoded) => {
       if (err) {
