@@ -21,9 +21,41 @@
 }
 .category-buffer{
     margin-top: 20px;
+    margin-left: 20px;
 }
 .fashion-buffer{
-    margin-top: 20px
+    margin-top: 20px;
+    margin-left: 20px
+}
+
+/*style for sign in page*/
+#signin-body{
+    background-color: #f9f9fa;
+}
+#company-name {
+    color: #0c25a0;
+}
+#navbarCollapse{
+    color: #0c25a0;
+    font-weight: bold;
+}
+#form-box{
+    background-color: #ffffff;
+    height: 500px;
+    box-shadow: 0 2px 4px 0 rgba(181,181,181,.7);
+    border-radius: 5px;
+}
+.signin-caption{
+    text-align: center;
+}
+#form-heading{
+    text-align: center;
+    color: #0c25a0;
+}
+h2{
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 
 }
 /*.card-image{
     max-height: 100%;
