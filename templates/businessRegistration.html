@@ -1,125 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>business profile</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/businessRegistration.css" />
-    <script src="main.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <title>sign up</title>
 </head>
 <body>
-    <!-- Navigation Bar -->
-
-    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- navigation bar -->
+ <nav class="navbar navbar-light  navbar-expand-lg fixed-top" style="background-color: #ffffff">
+    <a href="index.html" class="navbar-brand" id="company-name"> <h2> WEConnect! </h2> </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="index.html"><h2>WEconnect</h2></a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                  
-                <li class="nav-item ">    
-                    <a class="nav-link" href="index.html"> Home <span class="sr-only">(current)</span></a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="navbar-item">
+                    <a href="index.html" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="businessRegisteration.html"> Register Business</a>
-                  </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="catalogs.html">Catalogs</a>
+                <li class="navbar-item">
+                    <a href="signin.html" class="nav-link">Log in</a>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="signin.html">Sign in</a>
+                <li class="navbar-item">
+                    <a href="signup.html" class="nav-link">Sign up</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="businessRegistration.html" class="nav-link">Register</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="catalogs.html" class="nav-link">Catalogs</a>
                 </li>
                 
             </ul>
         </div>
-    </nav>
-
-    <!--Main body -->
-    <div class="container" id="casing">
-        <div class="col-sm-12" id="titlecasing">
-            <span id="title"><h2>Register Business</h2></span>
+ </nav>
+<div class="container-fluid mb-5" style="margin-top: 80px" id="signin-body">
+    <div class="row">
+        <div class="col-md-3">
+            
         </div>
-        
-        <div class="col-sm-12" >
-            <div class="row">
-                <form action="">
-                    <div class="col-sm-12" id="main">
-                        <div class="row">
-                            <div class="col-sm-6 form-group">
-                                <label >Company Name</label>
-                                <input type="text" value="" placeholder="Enter name of company" class="form-control" required="required">
-                            </div>
-                            <div class="col-sm-6 form-group">
-                                <label for="">Your position</label>
-                                <input type="text" name="title" placeholder="Enter your position" class="form-control" required="required">
-                            </div>
-                                    
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-6 form-group">
-                                <label >Company's Email</label>
-                                <input type="text" value="" placeholder="Enter company's Email" class="form-control" required="required">
-                            </div>
-                            <div class="col-sm-6 form-group">
-                                <label for="">Company's Website</label>
-                                <input type="text" name="title" value="" placeholder="Enter Company's website" class="form-control">
-                            </div>
-                                
-                        </div>
-
-                        <div class="row">
-                                
-                            <div class="col-sm-6 form-group">
-                                <label >Last Name</label>
-                                <input type="text" name="lastName" value="" placeholder="Enter last name" class="form-control" required="required">
-                            </div>
-                            <div class="col-sm-6 form-group">
-                                <label for="">First name</label>
-                                <input type="text" name="firstName"  value="" placeholder="Enter first name" class="form-control" required="required">
-                            </div>
-                                        
-                        </div>
-                        <div class="form-group">
-                            <label for="">Company's Address</label>
-                            <textarea name="address" value="" placeholder="Enter company's address"  rows="2" class="form-control" required="required"></textarea>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4 form-group">
-                                <label >City</label>
-                                <input type="text" placeholder="Enter city " class="form-control" required="required">
-                            </div>
-
-                            <div class="col-sm-4 form-group">
-                                <label >State</label>
-                                <input type="text" placeholder="Enter state " class="form-control" required="required">
-                            </div>
-                            <div class="col-sm-4 form-group">
-                                <label >Zip</label>
-                                <input type="text" placeholder="Enter Zip code" class="form-control" required="required">
-                            </div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6 form-group">
-                                <label >Country</label>
-                                <input type="text" placeholder="Enter your country" class="form-control" required="required">
-                            </div>
-                            <div class="col-sm-6 form-group">
-                                <label>Company's Phone Number</label>
-                                <input type="number" placeholder="Enter Phone Number Here" class="form-control" required="required">
-                            </div>
-                        </div>
-
-                        <button type="button" class="btn btn-success">Register</button>
-                        
+        <div class="col-md-6 mt-4 mb-5 p-3" id="registration-form">
+            <form>
+                <h2 style="font-style: normal;text-align: center;">Register your business</h2>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <label class="col-form-label" for="company-name">Company name</label>
+                        <input type="text" name="company-name" id="company-name" class="form-control" placeholder="Enter company name">
                     </div>
-                </form>
-            </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <label class="col-form-label" for="Address">Address</label>
+                        <input type="text" name="Address" id="Address" class="form-control" placeholder="Enter company Address">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <label class="col-form-label" for="Telephone">Telephone</label>
+                        <input type="number" name="telephone" id="telephone" class="form-control" placeholder="Enter company telephone number">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <label class="col-form-label" for="website">Website</label>
+                        <input type="url" name="website" id="website" class="form-control" placeholder="Enter company website">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <label class="col-form-label" for="email">E-mail</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Enter company email">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <label class="col-form-label" for="category">Category</label>
+                        <input type="text" name="category" id="category" class="form-control" placeholder="Enter company category">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <label class="col-form-label" for="location">location</label>
+                        <input type="text" name="location" id="location" class="form-control" placeholder="Enter company location">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-3">
+            
         </div>
     </div>
+</div>
+<!-- footer area -->
+<div class="row mt-5 container-fluid">
+    <div class="col-md-12">
+        <footer>
+            <p> Copyright © <span><a href="index.html"> WEConnect</a></span>  | all right reserved | <span><a href=""></a>Privacy Policy.</span> <span><a href=""> Terms of use</a></span> " <a href="index.html"></a> </p>
+        </footer>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 </body>
 </html>
